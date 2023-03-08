@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "419194121817",
+    "firebase_url": "https://aven-residence-project-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "aven-residence-project",
+    "storage_bucket": "aven-residence-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419194121817:android:fe160a0e96065e5c9bcb48",
+        "android_client_info": {
+          "package_name": "com.example.login_and_register"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419194121817-opo7isl51tbinp31fdrtl5ucn6803s44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4LTAh0H3AlfdTYHf56sRwOQNzx9-DdWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419194121817-opo7isl51tbinp31fdrtl5ucn6803s44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
