@@ -230,7 +230,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: CircularProgressIndicator(),
                       ),
                   barrierDismissible: false);
-              print(emailController.text);
+
               firebaseService service = firebaseService();
               dynamic register = await service.register(
                   email: emailController,

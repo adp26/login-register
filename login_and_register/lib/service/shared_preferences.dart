@@ -7,7 +7,6 @@ class Preferences {
       required String email,
       required String fullName}) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-
     // sharedPreferences.setString("uid", uid);
     // sharedPreferences.setString("fullname", fullName);
     // sharedPreferences.setString("email", email);
@@ -20,5 +19,10 @@ class Preferences {
     List? strReturn = sharedPreferences.getStringList("data") ?? [];
 
     return strReturn;
+  }
+
+  Future<void> deleteCredential() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setStringList('data', []);
   }
 }

@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:login_and_register/service/shared_preferences.dart';
 import 'package:login_and_register/sizeConfig.dart';
+import 'package:login_and_register/theme.dart';
 import 'package:login_and_register/view/onboard_page.dart';
 import 'package:login_and_register/view/sign_in_page.dart';
 import 'package:login_and_register/view/sign_up_page.dart';
@@ -29,10 +30,8 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, AsyncSnapshot<List?> snapshot) {
           bool bolLoginValid = false;
           if (snapshot.hasData) {
-            if (snapshot.data != null) {
-              if (snapshot.data![0] != "") {
-                bolLoginValid = true;
-              }
+            if (snapshot.data != null && snapshot.data!.isNotEmpty) {
+              bolLoginValid = true;
 
               if (bolLoginValid) {
                 return SuccessPage();
@@ -41,8 +40,14 @@ class MyApp extends StatelessWidget {
               return OnboardPage();
             }
           }
-
-          return OnboardPage();
+          return Scaffold(
+            backgroundColor: primaryColor,
+            body: Center(
+              child: CircularProgressIndicator(
+                color: Colors.white,
+              ),
+            ),
+          );
         },
       ),
     );

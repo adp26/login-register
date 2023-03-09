@@ -41,8 +41,7 @@ class _SuccessPageState extends State<SuccessPage> {
       return GestureDetector(
         onTap: () {
           Preferences pref = Preferences();
-          pref.SetLoginCredential(
-              uid: "", email: "", phoneNumber: "", fullName: "");
+          pref.deleteCredential();
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(builder: (context) => const OnboardPage()),

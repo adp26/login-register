@@ -37,13 +37,12 @@ class _SignInPageState extends State<SignInPage> {
               password: passwordController.text.trim())
           // .timeout(Duration(seconds: 5), onTimeout: timeOut())
           .then((value) async {
-        print('keisni');
         uid = (value.user?.uid).toString();
         // print(value.user?.uid);
         firebaseService firebase = firebaseService();
         Preferences pref = Preferences();
         var data = await firebase.getData(uid);
-        print(data);
+
         if (data != null) {
           pref.SetLoginCredential(
               uid: uid,
@@ -150,8 +149,6 @@ class _SignInPageState extends State<SignInPage> {
           validator: (value) {
             if (value == null || value.isEmpty) {
               return 'Email is required';
-            } else {
-              print(value);
             }
           },
           controller: emailController,
